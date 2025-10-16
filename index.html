@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>作品集 - Your Name</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Your Name</h1>
+      <nav class="main-nav" id="main-nav">
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list">菜单</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#projects">作品</a></li>
+          <li><a href="#about">关于</a></li>
+          <li><a href="#contact">联系</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>你好，我是 Your Name</h2>
+        <p>前端开发者 & 设计师。欢迎查看我的作品集。</p>
+      </div>
+    </section>
+
+    <section id="projects" class="projects container">
+      <h3>作品</h3>
+      <div class="project-grid">
+        <article class="project-card" data-title="示例项目 1">
+          <img src="images/project1.svg" alt="示例项目1">
+          <h4>示例项目 1</h4>
+          <p>这是一个简短描述。</p>
+          <button class="view-btn">查看</button>
+        </article>
+
+        <article class="project-card" data-title="示例项目 2">
+          <img src="images/project2.svg" alt="示例项目2">
+          <h4>示例项目 2</h4>
+          <p>这是另一个简短描述。</p>
+          <button class="view-btn">查看</button>
+        </article>
+
+        <article class="project-card" data-title="示例项目 3">
+          <img src="images/project3.svg" alt="示例项目3">
+          <h4>示例项目 3</h4>
+          <p>第三个项目的简短描述。</p>
+          <button class="view-btn">查看</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h3>关于我</h3>
+      <p>在这里写一段关于你的介绍，例如技能、经验和兴趣等。</p>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h3>联系</h3>
+      <p>通过下面的邮件地址与我联系：</p>
+      <p><a href="mailto:you@example.com">you@example.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© 2025 Your Name</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
