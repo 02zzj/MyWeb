@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>个人作品集网站</title>
+  <meta name="description" content="张智均的个人作品集网站，展示最新的前端开发项目和设计作品">
+  <meta name="keywords" content="个人作品集,前端开发,Web设计,项目展示">
+  <title>张智均 - 个人作品集网站</title>
   <link rel="stylesheet" href="styles.css">
   <!-- 高德地图API -->
   <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=b009042a3c95239315b948004b9e5a86"></script>
@@ -12,10 +14,10 @@
   <header class="site-header">
     <div class="container">
       <h1 class="logo">个人作品集</h1>
-      <nav class="main-nav" id="main-nav">
-        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list">菜单</button>
+      <nav class="main-nav" id="main-nav" role="navigation">
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="切换导航">菜单</button>
         <ul id="nav-list" class="nav-list">
-          <li><a href="index.html">首页</a></li>
+          <li><a href="#top" aria-current="page">首页</a></li>
           <li><a href="#projects">作品</a></li>
           <li><a href="#about">关于</a></li>
           <li><a href="#contact">联系</a></li>
@@ -25,7 +27,7 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" id="top">
       <div class="container">
         <h2>你好，我是张智均</h2>
         <p>欢迎查看我的个人作品集网站，这里展示了我的最新作品和项目。</p>
@@ -39,21 +41,21 @@
           <img src="images/p1.png" alt="绿色星云中的飞碟舰队">
           <h4>绿色星云中的飞碟舰队</h4>
           <p>一艘巨大的飞碟型宇宙战舰悬停在翠绿星云之中，其表面布满发光的绿色电路纹路，周围小型飞船穿梭飞行，发射出彩色激光。远处行星与陨石群点缀其间，构成一幅神秘而宏大的太空奇观。</p>
-          <button class="view-btn">查看</button>
+          <button class="view-btn" aria-label="查看绿色星云中的飞碟舰队作品">查看</button>
         </article>
 
         <article class="project-card" data-title="宇宙决战中的巨型机甲">
           <img src="images/p2.png" alt="宇宙决战中的巨型机甲">
           <h4>宇宙决战中的巨型机甲</h4>
           <p>在炽烈燃烧的恒星背景前，一台庞大的变形机甲矗立于太空战场中心，四架战机环绕其周身，释放出金色能量束。整个画面充满动感与力量，象征着一场史诗级的星际对决正在上演。</p>
-          <button class="view-btn">查看</button>
+          <button class="view-btn" aria-label="查看宇宙决战中的巨型机甲作品">查看</button>
         </article>
 
         <article class="project-card" data-title="太空机甲基地内部">
           <img src="images/p3.png" alt="太空机甲基地内部">
           <h4>太空机甲基地内部</h4>
           <p>在深邃宇宙的映衬下，一艘巨型空间站内，多台机甲正沿着传送带有序行进。透明穹顶外，壮丽的星系旋臂清晰可见，而前景中悬浮的全息界面显示着复杂的系统数据，展现出未来科技与机械美学的完美融合。</p>
-          <button class="view-btn">查看</button>
+          <button class="view-btn" aria-label="查看太空机甲基地内部作品">查看</button>
         </article>
       </div>
     </section>
@@ -148,7 +150,7 @@
         <!-- 联系表单 -->
         <div class="contact-form">
           <h4>发送消息</h4>
-          <form id="contactForm">
+          <form id="contactForm" aria-label="联系表单">
             <div class="form-group">
               <label for="name">姓名</label>
               <input type="text" id="name" name="name" required>
@@ -179,16 +181,16 @@
           
           <h4>社交媒体</h4>
           <div class="social-links">
-            <a href="https://github.com" target="_blank" class="social-link">
+            <a href="https://github.com" target="_blank" class="social-link" aria-label="访问我的GitHub">
               <span>GitHub</span>
             </a>
-            <a href="https://linkedin.com" target="_blank" class="social-link">
+            <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="访问我的LinkedIn">
               <span>LinkedIn</span>
             </a>
-            <a href="https://twitter.com" target="_blank" class="social-link">
+            <a href="https://twitter.com" target="_blank" class="social-link" aria-label="访问我的Twitter">
               <span>Twitter</span>
             </a>
-            <a href="https://weibo.com" target="_blank" class="social-link">
+            <a href="https://weibo.com" target="_blank" class="social-link" aria-label="访问我的微博">
               <span>微博</span>
             </a>
           </div>
