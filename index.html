@@ -140,12 +140,67 @@
 
     <section id="contact" class="contact container">
       <h3>联系</h3>
-      <p>欢迎通过以下方式与我联系：</p>
-      <ul class="contact-list">
-      <li>邮箱：<a href="mailto:333666999@qq.com">333666999@qq.com</a></li>
-      <li>电话：<a href="tel:10086">10086</a></li>
-      <li>地址：银河系·太阳区·地球村</li>
-      </ul>
+      
+      <div class="contact-content">
+        <!-- 联系表单 -->
+        <div class="contact-form">
+          <h4>发送消息</h4>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">姓名</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">邮箱</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">留言</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">发送消息</button>
+          </form>
+        </div>
+        
+        <!-- 联系信息和社交媒体 -->
+        <div class="contact-info">
+          <h4>联系信息</h4>
+          <ul class="contact-list">
+            <li>邮箱：<a href="mailto:333666999@qq.com">333666999@qq.com</a></li>
+            <li>电话：<a href="tel:10086">10086</a></li>
+            <li>地址：银河系·太阳区·地球村</li>
+          </ul>
+          
+          <h4>社交媒体</h4>
+          <div class="social-links">
+            <a href="https://github.com" target="_blank" class="social-link">
+              <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-link">
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-link">
+              <span>Twitter</span>
+            </a>
+            <a href="https://weibo.com" target="_blank" class="social-link">
+              <span>微博</span>
+            </a>
+          </div>
+          
+          <!-- 地图 -->
+          <h4>我的位置</h4>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10600000.957861985!2d102.77777777777777!3d35.88888888888889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDlj5fliLY!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 

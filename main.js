@@ -53,6 +53,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // 联系表单提交处理
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // 获取表单数据
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+      
+      // 这里可以添加实际的表单提交逻辑
+      // 例如发送到服务器或邮件服务
+      console.log('表单提交:', { name, email, message });
+      
+      // 显示成功消息
+      alert('感谢您的消息！我会尽快回复您。');
+      
+      // 重置表单
+      contactForm.reset();
+    });
+  }
+
   // 简单的异步示例（如需要从 API 获取项目数据）
   // fetch('/api/projects')
   //   .then(res => res.json())
