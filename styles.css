@@ -57,9 +57,106 @@ body {
 .projects h3, .about h3, .contact h3 {
   margin-bottom: 1rem;
 }
+
+/* 关于模块样式 */
+.about-content {
+  margin-bottom: 2rem;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.skills-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.skills-list li:before {
+  content: "▹";
+  color: #2196f3;
+  padding-right: 0.5rem;
+}
+
+/* 经历时间线样式 */
+.experience-section {
+  margin: 2rem 0;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 2rem 0;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #2196f3;
+  left: 20px;
+  margin-left: -1px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 50px;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #2196f3;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.timeline-content h5 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* 成就和证书样式 */
+.achievements-section {
+  margin: 2rem 0;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.achievement-item {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.achievement-date {
+  color: #2196f3;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr; /* 修改为单列布局，使每个作品单独占一行 */
   gap: 1rem;
 }
 .project-card {
@@ -70,12 +167,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  min-height: 300px;
+  align-items: center; /* 添加居中对齐 */
 }
 .project-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
+  max-width: 100%;
+  height: auto;
   border-radius: 4px;
+  flex-shrink: 0;
+  object-fit: contain; /* 确保图片完整显示 */
+  object-position: center; /* 图片居中 */
 }
 .view-btn {
   margin-top: auto;
