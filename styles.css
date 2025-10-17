@@ -178,6 +178,11 @@ body {
   object-fit: contain; /* 确保图片完整显示 */
   object-position: center; /* 图片居中 */
 }
+.project-card p {
+  text-indent: 2em; /* 添加两个字符的缩进 */
+  line-height: 1.6;
+}
+
 .view-btn {
   margin-top: auto;
   padding: 0.5rem 0.75rem;
@@ -193,6 +198,57 @@ body {
   padding: 1rem 0;
   color: #666;
 }
+
+/* 作品查看模态框样式 */
+.project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 6px;
+  max-width: 90%;
+  max-height: 90%;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  background: none;
+  border: none;
+}
+
+.close-btn:hover {
+  color: #2196f3;
+}
+
 /* 响应式 */
 @media (max-width: 900px) {
   .project-grid { grid-template-columns: repeat(2, 1fr); }
@@ -202,4 +258,13 @@ body {
   .nav-list { display: none; flex-direction: column; gap: 0; }
   .nav-list.show { display: flex; }
   .project-grid { grid-template-columns: 1fr; }
+  
+  .modal-content {
+    padding: 1rem;
+    max-width: 95%;
+  }
+  
+  .modal-content h3 {
+    font-size: 1.2rem;
+  }
 }

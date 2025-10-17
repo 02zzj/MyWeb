@@ -18,10 +18,40 @@ document.addEventListener('DOMContentLoaded', function() {
     var btn = card.querySelector('.view-btn');
     btn.addEventListener('click', function() {
       var title = card.dataset.title || card.querySelector('h4')?.textContent;
-      // 简单示例：弹窗显示项目标题
-      alert('打开项目： ' + title);
+      var imgSrc = card.querySelector('img').src;
+      openProjectModal(title, imgSrc);
     });
   });
+
+  // 打开项目模态框
+  function openProjectModal(title, imgSrc) {
+    // 创建模态框元素
+    var modal = document.createElement('div');
+    modal.className = 'project-modal';
+    modal.innerHTML = `
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>${title}</h3>
+        <img src="${imgSrc}" alt="${title}">
+      </div>
+    `;
+    
+    // 添加到页面
+    document.body.appendChild(modal);
+    
+    // 添加关闭事件
+    var closeBtn = modal.querySelector('.close-btn');
+    closeBtn.addEventListener('click', function() {
+      document.body.removeChild(modal);
+    });
+    
+    // 点击模态框外部关闭
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        document.body.removeChild(modal);
+      }
+    });
+  }
 
   // 简单的异步示例（如需要从 API 获取项目数据）
   // fetch('/api/projects')
