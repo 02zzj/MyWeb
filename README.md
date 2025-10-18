@@ -23,8 +23,7 @@
 - `styles.css` - 样式表文件（包含所有CSS样式和动画）
 - `main.js` - JavaScript功能文件（包含主题切换、语言切换、交互效果等）
 - `images/` - 图片资源文件夹
-  - `p1.png`, `p2.png`, `p3.png` - 网站预览图
-  - `project1.svg`, `project2.svg`, `project3.svg` - 项目图片
+  - `p1.png`, `p2.png`, `p3.png` - 作品图片
 
 ## 项目内容
 
