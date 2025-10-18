@@ -441,11 +441,12 @@ body {
   flex-direction: column;
   gap: 0.5rem;
   min-height: 300px;
-  align-items: center; /* 添加居中对齐 */
+  align-items: center;
   opacity: 0;
   transform: perspective(1000px) rotateY(20deg) translateZ(-20px);
   animation: flipIn 0.8s ease forwards;
   transition: all 0.4s ease;
+  margin-bottom: 1rem;
 }
 
 .project-card:nth-child(1) {
@@ -481,9 +482,10 @@ body {
   height: auto;
   border-radius: 4px;
   flex-shrink: 0;
-  object-fit: contain; /* 确保图片完整显示 */
-  object-position: center; /* 图片居中 */
+  object-fit: contain;
+  object-position: center;
   transition: transform 0.3s ease;
+  margin-bottom: 0.5rem;
 }
 
 .project-card:hover img {
@@ -491,8 +493,10 @@ body {
 }
 
 .project-card p {
-  text-indent: 2em; /* 添加两个字符的缩进 */
+  text-indent: 2em;
   line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
 .view-btn {
@@ -505,6 +509,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   transform: translateY(0);
+  margin-bottom: 0.5rem;
 }
 
 .view-btn:hover { 

@@ -52,12 +52,18 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   if (languageToggle) {
+    // 初始化语言切换按钮文本
+    languageToggle.textContent = currentLanguage === 'en' ? '中文' : 'English';
+    
     languageToggle.addEventListener('click', function() {
       // 切换语言
       const currentLang = document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
       const newLang = currentLang === 'zh' ? 'en' : 'zh';
       
       switchLanguage(newLang);
+      
+      // 更新语言切换按钮文本
+      this.textContent = newLang === 'en' ? '中文' : 'English';
       
       // 保存用户偏好到localStorage
       localStorage.setItem('language', newLang);
@@ -330,7 +336,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // 更新联系信息列表
       const contactListItems = document.querySelectorAll('.contact-list li');
       if (contactListItems.length >= 3) {
-        contactListItems[0].innerHTML = translations.en['邮箱：'] + '<a href="mailto:333666999@qq.com">333666999@qq.com</a>';
+        contactListItems[0].innerHTML = translations.en['邮箱：'] + '<a href="mailto:2217594081@qq.com">2217594081@qq.com</a>';
         contactListItems[1].innerHTML = translations.en['电话：'] + '<a href="tel:10086">10086</a>';
         contactListItems[2].innerHTML = translations.en['地址：银河系·太阳区·地球村'];
       }
@@ -350,6 +356,11 @@ document.addEventListener('DOMContentLoaded', function() {
       if (navToggle) {
         navToggle.setAttribute('aria-label', 'Toggle navigation');
         navToggle.textContent = translations.en['菜单'];
+      }
+      
+      // 更新语言切换按钮文本
+      if (languageToggle) {
+        languageToggle.textContent = '中文';
       }
     } else {
       // 恢复为中文
@@ -480,7 +491,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // 更新联系信息列表
       const contactListItems = document.querySelectorAll('.contact-list li');
       if (contactListItems.length >= 3) {
-        contactListItems[0].innerHTML = translations.zh['邮箱：'] + '<a href="mailto:333666999@qq.com">333666999@qq.com</a>';
+        contactListItems[0].innerHTML = translations.zh['邮箱：'] + '<a href="mailto:2217594081@qq.com">2217594081@qq.com</a>';
         contactListItems[1].innerHTML = translations.zh['电话：'] + '<a href="tel:10086">10086</a>';
         contactListItems[2].innerHTML = translations.zh['地址：银河系·太阳区·地球村'];
       }
@@ -499,6 +510,11 @@ document.addEventListener('DOMContentLoaded', function() {
       if (navToggle) {
         navToggle.setAttribute('aria-label', '切换导航');
         navToggle.textContent = translations.zh['菜单'];
+      }
+      
+      // 更新语言切换按钮文本
+      if (languageToggle) {
+        languageToggle.textContent = 'English';
       }
     }
   }
